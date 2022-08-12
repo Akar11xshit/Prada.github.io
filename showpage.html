@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRADA</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+        body{
+            background-color:#fff;
+            margin: 0;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .col2{
+            flex: 2;
+            min-width: 260px;
+            display: flex;
+            justify-content: center;
+        }
+        .col2 img{
+            width: 100%;
+            min-width: 260px;
+        }
+        .col1{
+            flex: 1;
+            min-width: 260px;
+            
+        }
+        .displayInRow{
+            display: flex;
+            justify-content: space-between;
+        }
+        .productDes{
+            padding: 10px 20px;
+        }
+        .action{
+            padding: 40px;
+        }
+        button{
+            margin-top: 10px;
+            width: 100%;
+            padding: 8px;
+        }
+        .actionHolder{
+            border:1px solid white;
+            padding: 10px;
+            border-radius: 10px;
+            background-color:white;
+        }
+       
+    </style>
+</head>
+<body>
+   
+</body>
+<script>
+    const navHolder=document.createElement('div');
+      document.body.appendChild(navHolder);
+      navHolder.innerHTML=`
+         <div class="nav">
+          <div class="brand">
+           <a href="/">
+           <img src="https://allyourfonts.com/wp-content/uploads/2019/05/Prada-Font-Family-Free-Download.jpg" />
+           </a>
+           <a href="/">
+           <h3>
+             PRADA
+           </h3>
+           </a>
+         </div>
+
+      <div class="menu-item">
+        <a href="#">Cart</a>
+        <a href="#">SignIn</a>
+      </div>
+      </div> `;
+      const productList=[
+     
+     {
+           brand:"ADIDAS",
+           name:"MEN'S ADIDAS ORIGINALS ZX 2K BOOST PURE SHOES",
+           id:0,
+           price: 9000,
+           img:"https://content.adidas.co.in/static/Product-H06570/adidas_H06570_1.jpg.plp",
+           description:"When the ZX series first stepped onto the scene in the '80s, it stood out as proof of forward thinking design. These adidas ZX 2K Boost Pure Shoes build on that legacy of innovation with a half-encapsulated full-length Boost midsole that adds extra comfort and support to your step. The sleek textile upper and modern colour combinations add fresh sophistication.",
+     },
+     {
+           brand:"ADIDAS",
+           name:"MEN'S ADIDAS ORIGINALS NY 90 SHOES",
+           id:1,
+           price: 4800,
+           img:"https://content.adidas.co.in/static/Product-FZ2250/adidas_FZ2250_1.jpg.plp",
+           description:"Clean, crisp and casual. Just what you need when you've got places to be and no time to fuss with your wardrobe. Lace into these adidas shoes and go. The sleek look goes with anything, looks good anywhere and leaves plenty of room for self expression. And because this timeless style is sticking around, it's been updated with recycled materials.",
+     },
+     {
+           brand:"ADIDAS",
+           name:"WOMEN'S ADIDAS ORIGINALS CONTINENTAL 80 SHOES",
+           id:2,
+           price: 5500,
+           img:"https://content.adidas.co.in/static/Product-FU9980/adidas_FU9980_1.jpg.plp",
+           description:"Fire up that aerobics tape. The '80s are back, and they're just as glam as ever. These Continental 80 Shoes take design cues from an old-school adidas trainer launched in response to the '80s fitness craze. The vintage vibes looks just right with mom jeans and jumpsuits.",
+     },
+     {
+           brand:"ADIDAS",
+           name:"WOMEN'S ADIDAS ORIGINALS SL ANDRIDGE SHOES",
+           id:3,
+           price: 6000,
+           img:"https://content.adidas.co.in/static/Product-FY6637/adidas_FY6637_1.jpg.plp",
+           description:"There's a lot we can take away from the '70s, but let's start with the style of these adidas trainers. Exaggerating an archival runner, the SL Andridge shoes take a vintage-inspired nylon upper and amps it up with synthetic suede overlays, all emphasised with bold pops of colour. Curved and straight lines mix together to complete the retro vibe.",
+     },
+     {
+           brand:"ADIDAS",
+           name:"WOMEN'S ADIDAS ORIGINALS STAN SMITH PRIMEBLUE SHOES",
+           id:4,
+           price: 5000,
+           img:"",
+           description:"Since their debut on the tennis court in the '70s, the adidas Stan Smith shoes have always thought about the future. Today the iconic trainers continue that legacy and step out crafted with Primeblue, a performance recycled material made using upcycled plastic waste collected from beaches and coastal regions. The embroidered design is reminiscent of ghost nets found in the ocean, a visual reminder of our impact. Join us in our commitment to help end plastic waste. This product is made with Primeblue, a high-performance recycled material made in part with Parley Ocean Plastic. 50% of the upper is textile, 75% of the textile is Primeblue yarn. No virgin polyester.",
+     },
+     {
+           brand:"ADIDAS",
+           name:"WOMEN'S ADIDAS ORIGINALS CHOIGO SHOES",
+           id:5,
+           price: 7500,
+           img:"https://content.adidas.co.in/static/Product-FY6518/adidas_FY6518_1.jpg.plp",
+           description:"Track and field is flashy. It just is. It shows off the speed, the height and the limits of human strength. These adidas Choigo shoes celebrate it with throwback sporty style. But in the spirit of looking to the future, they also lift it up on a bold platform and throw in some iridescent colours for good measure. A touch of the past. A nod to the future. All that flash.",
+     },
+     {
+           brand:"ADIDAS",
+           name:"MEN'S ADIDAS ORIGINALS OZWEEGO SHOES",
+           id:6,
+           price: 6700,
+           img:"https://content.adidas.co.in/static/Product-FV9654/adidas_FV9654_1.jpg.plp",
+           description:"When the adidas OZWEEGO Shoes were introduced as a running shoe back in the day, they opened the doors to a new future. Innovative. Daring. Technical. This iteration continues the legacy. Same progressive design. Same unparalleled cushioning. Though no running required this time.",
+     },
+     {
+           brand:"ADIDAS",
+           name:"MEN'S ADIDAS ORIGINALS STAN SMITH SHOES",
+           id:7,
+           price: 8200,
+           img:"https://content.adidas.co.in/static/Product-FX5568/adidas_FX5568_1.jpg.plp",
+           description:"Oh, the Stan Smith. Championed by the two-time Grand Slam-winning tennis champ. Beloved by millions. Even after its winning attitude walked off the courts and onto the streets, it's stayed true to its DNA with a simple upper, understated style and serious comfort. This version of the adidas shoes answers the challenges of today. It's made with vegan and recycled materials up top and recycled chewing gum in the outsole.",
+     },
+     {
+           brand:"ADIDAS",
+           name:"MEN'S ADIDAS ORIGINALS ZX 10000 SHOES",
+           id:8,
+           price: 7000,
+           img:"https://content.adidas.co.in/static/Product-FY5173/adidas_FY5173_1.jpg.plp",
+           description:"The ZX series set the tone for the future of running. And those wearing them set the pace. Though these adidas ZX 10000 Shoes are for a slowed-down speed (we're talking straight chilling), the DNA of innovation still pulses through them. The Torsion System offers midfoot stability. And the durable CORDURAÂ® nylon and leather upper rides on a rubber outsole. So wherever the day finds you, it'll find you in comfort.",
+     },
+     {
+           brand:"ADIDAS",
+           name:"MEN'S ADIDAS ORIGINALS ZX 1K BOOST SHOES",
+           id:9,
+           price: 6000,
+           img:"https://content.adidas.co.in/static/Product-FY5648/adidas_adi_FY5648_1.jpg.plp",
+           description:"When you're charged up and activated, nothing can stand in your way. At least, nothing SHOULD stand in your way. Comfort is key, and these adidas ZX 1K Boost Shoes are packed with it, thanks to a half-Boost, half-EVA midsole (otherwise known as a winning combo). Take to the streets. Be there a while. These are along for the whole ride.",
+     },
+     {
+           brand:"ADIDAS",
+           name:"MEN'S ADIDAS ORIGINALS ZX 8000 QUALITÄT SHOES",
+           id:10,
+           price: 5800,
+           img:"https://content.adidas.co.in/static/Product-GY0121/adidas_GY0121_1.jpg.plp",
+           description:"Never compromise on quality. These ZX 8000 Shoes don't. In fact, it's what they're driven by. Part of the adidas A-ZX series, a tribute to the first adidas running shoes, the minimalist shoes clearly stand for the letter Q with their luxe, mindful approach. In design partnership with Highsnobiety, they explore the notion of ",
+     },
+     {
+           brand:"ADIDAS",
+           name:"MEN'S ADIDAS ORIGINALS NMD_R1 PRIMEKNIT SHOES",
+           id:11,
+           price: 13000,
+           img:"https://content.adidas.co.in/static/Product-FX6768/adidas_FX6768_1.jpg.plp",
+           description:"There's a lot to celebrate: years of innovation, creation and evolution. These adidas NMD_R1 shoes take cues from iconic silhouettes of the past and move them into the future in true NMD style. Boost cushioning provides plush comfort. The unmistakable midsole plugs and one-to-one re-release of adidas Primeknit patterns and colours keep the look authentic.",
+     },
+     {
+           brand:"ADIDAS",
+           name:"MEN'S ADIDAS ORIGINALS SUPERSTAR RUN-DMC SHOES",
+           id:12,
+           price: 11000,
+           img:"https://content.adidas.co.in/static/Product-FX7616/adidas_FX7616_1.jpg.plp",
+           description:"Some say the golden age of hip hop began in 1983 in Hollis, Queens. That's the hometown of Rev. Run, DMC and Jam Master Jay. They took hold of the culture, changing the sound and revolutionizing the look. And nobody wore a pair of shell toes like they did. In honor of the adidas Superstar sneakers' 50th anniversary, these adidas Superstar shoes are inspired by the legacy of the songs we never got out of our heads. They get special details like adidas branded lace tips and a Run-DMC sockliner and tongue label.",
+     },
+     {
+           brand:"ADIDAS",
+           name:"WOMEN'S ADIDAS ORIGINALS ZX 2K BOOST 2.0 SHOES",
+           id:13,
+           price: 14000,
+           img:"https://content.adidas.co.in/static/Product-GZ7823/adidas_GZ7823_1.jpg.plp",
+           description:"ZXience expands the ZX universe with a glow. Step into the ZX 2K BOOST 2.0 to experience the cushioned comfort of the wrapped Boost midsole. Embrace the glow of the upper's bold luminous design. Eyes may widen. Embrace all sensations.",
+     },
+     {
+           brand:"ADIDAS",
+           name:"WOMEN'S ADIDAS ORIGINALS ZX 2K BOOST PURE SHOES",
+           id:14,
+           price: 8000,
+           img:"https://content.adidas.co.in/static/Product-GZ7874/adidas_GZ7874_1.jpg.plp",
+           description:"When the ZX series first stepped onto the scene in the '80s, it stood out as proof of forward thinking design. These adidas ZX 2K Boost Pure Shoes build on that legacy of innovation with a half-encapsulated full-length Boost midsole that adds extra comfort and support to your step. The sleek textile upper and modern colour combinations add fresh sophistication.",
+     },
+
+
+]
+    const id=Number(document.location.search.split("=")[1]);
+    const product=productList[id];
+    const productHolder=document.createElement('div');
+          document.body.appendChild(productHolder);
+
+          productHolder.innerHTML=` <div class="container">
+        <div class="row">
+            <div class="col2">
+                <img src=${product.img} />
+            </div>
+            <div class="col1">
+                <div class="productDes">
+                    <h2>${product.name}</h2>
+                     <div class="displayInRow">
+                         <span>Peter England</span>
+                         <span>Price :${product.price}</span>
+                     </div>
+                     <div class="rating">
+
+                     </div>
+                     <span>${product.description}</span>
+                </div>
+            </div>
+            <div class="col1">
+                <div class="action">
+                    <div class="actionHolder">
+                        <div class="displayInRow">
+                            <span>Price :</span>
+                            <span>${product.price}</span>
+                        </div>
+                        <div class="displayInRow">
+                            <span>Qty:</span>
+                            <span>1</span>
+                        </div>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>`;
+
+    const footerHolder=document.createElement('div');
+              document.body.appendChild(footerHolder);
+              footerHolder.innerHTML=`
+               <div class="footer" style="background-color: whitesmoke;padding: 10px;">
+              <p style="text-align: center;">all copy right resversed with <a href="#">PRADA</a></p>
+              </div>
+              `;
+</script>
+</html>

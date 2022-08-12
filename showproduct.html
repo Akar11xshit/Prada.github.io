@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRADA</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+        body{
+            background-color:white;
+            margin: 0;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .col-2{
+            flex: 2;
+            min-width:280px;
+        }
+        .col-1{
+            flex: 1;
+            min-width:280px;
+        }
+        .col-2 img{
+            width: 100%;
+        }
+        .productDes{
+            padding: 10px;
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+        }
+        .action{
+            margin-top: 14px;
+            padding: 20px;
+        }
+        .action button{
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: red;
+            border:1px solid red;
+            color:white;
+        }
+        .inerrAction{
+            padding: 20px;
+            border: 1px solid white;
+            background-color: white;
+        }
+        .counter{
+          background-color: red;
+          padding: 5px;
+          border-radius: 50%;
+          font-size: 18px;
+          color: white;
+      }
+    </style>
+</head>
+<body>
+  
+</body>
+<script>
+ 
+    const navHolder=document.createElement('div');
+      document.body.appendChild(navHolder);
+      navHolder.innerHTML=`
+         <div class="nav">
+          <div class="brand">
+           <a href="/">
+           <img src="https://allyourfonts.com/wp-content/uploads/2019/05/Prada-Font-Family-Free-Download.jpg" />
+           </a>
+           <a href="/">
+           <h3>
+             PRADA
+           </h3>
+           </a>
+         </div>
+      <div class="menu-item">
+        <a href="cart.html">Cart <span class="counter">0</span></a>
+        <a href="signin.html">SignIn</a>
+      </div>
+      </div> `;
+      const productList=[
+     
+     {
+           brand:"PRADA",
+           name:"shirt",
+           id:0,
+           price: 4400,
+           img:"https://www.prada.com/content/dam/pradanux_products/U/UJL/UJL185/1YWUF0967/UJL185_1YWU_F0967_S_211_SLF.png/_jcr_content/renditions/cq5dam.web.white.800.1000.webp",
+           description:"100% pure cotton clothe",
+     },
+     {
+           brand:"PRADA",
+           name:"shirt",
+           id:1,
+           price: 4800,
+           img:"https://www.prada.com/content/dam/pradanux_products/U/UJN/UJN741/1YWWF0009/UJN741_1YWW_F0009_S_211_SLF.png/_jcr_content/renditions/cq5dam.web.white.800.1000.webp",
+           description:"100% pure cotton clothe",
+     },
+     {
+           brand:"PRADA",
+           name:"shirt",
+           id:2,
+           price: 5500,
+           img:"https://www.prada.com/content/dam/pradanux_products/U/UJL/UJL185/1YWTF0964/UJL185_1YWT_F0964_S_211_SLF.png/_jcr_content/renditions/cq5dam.web.white.800.1000.webp",
+           description:"100% pure cotton clothe",
+     },
+     {
+           brand:"PRADA",
+           name:"shirt",
+           id:3,
+           price: 5000,
+           img:"https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS400/1YV4F0009/UCS400_1YV4_F0009_S_211_SLF.png/_jcr_content/renditions/cq5dam.web.white.800.1000.webp",
+           description:"100% pure cotton clothe",
+     },
+     {
+           brand:"PRADA",
+           name:"shirt",
+           id:4,
+           price: 5000,
+           img:"https://www.prada.com/content/dam/pradanux_products/U/UJN/UJN741/1YZNF0009/UJN741_1YZN_F0009_S_211_SLF.png/_jcr_content/renditions/cq5dam.web.white.800.1000.webp",
+           description:"100% pure cotton clothe",
+     },
+     {
+           brand:"PRADA",
+           name:"shirt",
+           id:5,
+           price: 6500,
+           img:"https://www.prada.com/content/dam/pradanux_products/S/SJN/SJN282/1YMDF0002/SJN282_1YMD_F0002_S_211_SLF.png",
+           description:"suitable for western wear",
+     },
+     {
+           brand:"PRADA",
+           name:"shirt",
+           id:6,
+           price: 6700,
+           img:"https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1X9CF0P62/UCS319_1X9C_F0P62_S_182_SLF.png/_jcr_content/renditions/cq5dam.web.white.800.1000.webp",
+           description:"suitable for western wear",
+     },
+     {
+           brand:"PRADA",
+           name:"shirt",
+           id:7,
+           price: 6200,
+           img:"https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOVF011O/UCS319_1YOV_F011O_S_182_SLF.png/_jcr_content/renditions/cq5dam.web.white.800.1000.webp",
+           description:"suitable for western wear",
+     },
+     {
+           brand:"PRADA",
+           name:"shirt",
+           id:8,
+           price: 6000,
+           img:"https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png/_jcr_content/renditions/cq5dam.web.white.800.1000.webp",
+           description:"suitable for western wear",
+     },
+     {
+           brand:"PRADA",
+           name:"shirt",
+           id:9,
+           price: 6000,
+           img:"https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOSF014A/UCS319_1YOS_F014A_S_182_SLF.png/_jcr_content/renditions/cq5dam.web.white.800.1000.webp",
+           description:"suitable for western wear",
+     },
+     {
+           brand:"PRADA",
+           name:"shirt",
+           id:10,
+           price: 5800,
+           img:"https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS400/1YV5F0002/UCS400_1YV5_F0002_S_211_SLF.png/_jcr_content/renditions/cq5dam.web.white.800.1000.webp",
+           description:"Party Wear",
+     },
+     {
+           brand:"PRADA",
+           name:"shirt",
+           id:11,
+           price: 6800,
+           img:"https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1X9MF0KFS/UCS319_1X9M_F0KFS_S_182_SLF.png/_jcr_content/renditions/cq5dam.web.white.800.1000.webp",
+           description:"Party Wear",
+     },
+     {
+           brand:"PRADA",
+           name:"shirt",
+           id:12,
+           price: 5600,
+           img:"https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1X9MF0KFS/UCS319_1X9M_F0KFS_S_182_SLF.png/_jcr_content/renditions/cq5dam.web.white.800.1000.webp",
+           description:"Party Wear",
+     },
+     {
+           brand:"PRADA",
+           name:"shirt",
+           id:13,
+           price: 4000,
+           img:"https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1X9KF087W/UCS319_1X9K_F087W_S_182_SLF.png/_jcr_content/renditions/cq5dam.web.white.800.1000.webp",
+           description:"Party Wear",
+     },
+     {
+           brand:"PRADA",
+           name:"shirt",
+           id:14,
+           price: 8000,
+           img:"https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1X9MF0P5N/UCS319_1X9M_F0P5N_S_182_SLF.png/_jcr_content/renditions/cq5dam.web.white.800.1000.webp",
+           description:"Party Wear",
+     },
+
+
+]
+    const idString=document.location.search;
+    const id=Number(idString[4]);
+    const product=productList[id];
+
+    const productHolder=document.createElement('div');
+          document.body.appendChild(productHolder);
+          productHolder.innerHTML=`
+          <div class="container">
+       <div class="col-2">
+        <img src=${product.img} />
+       </div>
+       <div class="col-1" >
+           <div class="productDes">
+               <h2>${product.name}</h2>
+               <div class="row">
+                   <span>Price :</span>
+                   <span>&#8377; ${product.price}</span>
+               </div>
+               <div class="row">
+                <span>Brand :</span>
+                <span>Peter England</span>
+            </div>
+               <p>Des:- ${product.description}</p>
+           </div>
+       </div>
+       <div class="col-1">
+           <div class="action">
+               <div class="inerrAction">
+                <div class="row">
+                    <span>Price :</span>
+                    <span>&#8377; ${product.price}</span>
+                </div>
+                <div class="row">
+                    <span>Qty :</span>
+                    <span>
+                      <select onchange="handleChange(this)">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                     <option value="5">5</option>
+                    </select>
+                    </span>
+                </div>
+                <a href="cart.html">
+                <button onclick="addToCart()">
+                   Add to cart
+                 </button>
+                </a>
+               </div>
+           </div>
+       </div>
+   </div>
+          `;
+    let qty=1;
+   function handleChange(e){
+      qty=e.value;
+   }
+   let cartItem=localStorage.getItem("cartItem")?JSON.parse(localStorage.getItem("cartItem")):[];
+   function addToCart(){
+         cartItem=cartItem.filter(item=>item.id!=product.id)
+         localStorage.setItem("cartItem",JSON.stringify([{...product,qty},...cartItem]));
+   }
+          const footerHolder=document.createElement('div');
+              document.body.appendChild(footerHolder);
+              footerHolder.innerHTML=`
+               <div class="footer" style="background-color: whitesmoke;padding: 10px;">
+              <p style="text-align: center;">all copy right resversed with <a href="/">PRADA</a></p>
+              </div>
+              `;
+              const counter=document.querySelector('.counter');
+              counter.innerHTML=cartItem.length;
+</script>
+</html>
